@@ -26,7 +26,7 @@ header{
 
 .logo img{
     border-radius: 50%;
-    
+    width: 70px;
 }
 
 header > .interface{
