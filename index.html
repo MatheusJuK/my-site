@@ -209,10 +209,10 @@
                             formulario.addEventListener("submit", function(event){
                                 event.preventDefault();
 
-                                const nome = document.getElementById("name");
-                                const email = document.getElementById("email");
-                                const celular = document.getElementById("celular");
-                                const mensagem = document.getElementById("message");
+                                const nome = document.getElementById("name").value;
+                                const email = document.getElementById("email").value;
+                                const celular = document.getElementById("celular").value;
+                                const mensagem = document.getElementById("message").value;
 
                                 enviarDadosParaDiscord(nome,email,celular,mensagem);
                             });
