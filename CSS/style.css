@@ -173,12 +173,10 @@ section.sobre-mim .flex{
     gap: 20px;
 }
 .sobre-mim .txt-sobre-mim{
-    width: 1090px;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 400px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 200px;
-    word-spacing: 2px;
-    
 }
 .sobre-mim .txt-sobre-mim .experiencia{
     margin-top: 50px;
@@ -188,6 +186,7 @@ section.sobre-mim .flex{
 .sobre-mim .txt-sobre-mim span{
     color: rgb(14, 199, 199);
     margin-right: 20px;
+    font-size: 1.5em;
 }
 section.sobre-mim .txt-sobre-mim > h1{
     color: rgb(14, 199, 199);
@@ -290,9 +289,15 @@ section.habilidades{
     margin-top: 100px;
 }
 section.habilidades .flex{
+    gap: 250px;
+    justify-content: center;
+    align-items: center;
+}
+section.habilidades .flex .flex{
     gap: 60px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 section.habilidades > h1{
     color: rgb(14, 199, 199);
@@ -435,7 +440,7 @@ footer .copyright{
     font-size: 0.7em;
 }
 /* Responsividade */
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1150px){
     
     /* gerais */
     .flex{
