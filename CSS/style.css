@@ -4,6 +4,7 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: "Agdasima", sans-serif;
+    scroll-behavior: smooth;
 }
 :root{
     --primary-color: rgb(14, 199, 199);
