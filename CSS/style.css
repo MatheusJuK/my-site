@@ -237,8 +237,7 @@ section.projetos{
 }
 
 section.projetos .flex{
-    gap: 160px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 60px;
 }
@@ -251,6 +250,15 @@ section.projetos .interface >h1{
 .img-port{
     width: 360px;
     height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    position: relative;
+    margin-bottom: 225px;
+}
+.img-port-apache{
+    width: 360px;
+    height: 460px;
     background-size: contain;
     background-position: 100% 100%;
     transition: 5s;
@@ -258,7 +266,7 @@ section.projetos .interface >h1{
     margin-bottom: 225px;
 }
 .img-port:hover{
-    background-position: 100% 0%;
+    background-position: 100% 100%;
 }
 .overlay{
     position: absolute;
