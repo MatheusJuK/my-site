@@ -12,35 +12,32 @@ formulario.addEventListener("submit", (event) => {
 
   enviarDadosParaDiscord(nome, email, celular, mensagem);
 });
-document.addEventListener("DOMContentLoaded", () => {
-  lista.classList.add("hidden");
-});
 
-function enviarDadosParaDiscord(nome, email, celular, mensagem) {
+async function enviarDadosParaDiscord(nome, email, celular, mensagem) {
   const webhookURL =
     "https://discord.com/api/webhooks/1364744699092406392/klQuENRgGkiKpMpRYDvAatomcDS1oq14gn6X-M4PWzO6DRDj3uVatpC4n2YwRB4E60Ws";
 
   const dados = {
     content: `Nome: ${nome}\nEmail: ${email}\nTelefone: ${celular}\nMensagem: ${mensagem}`,
   };
-
-  fetch(webhookURL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dados),
-  })
-    .then((response) => {
-      if (response.ok) {
-        alert("Dados enviados com sucesso!");
-      } else {
-        alert("Erro ao enviar dados.");
-      }
-    })
-    .catch((error) => {
-      console.error("Erro:", error);
+  try {
+    const response = await fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dados),
     });
+
+    if (response.ok) {
+      alert("Dados enviados com sucesso!");
+      formulario.reset();
+    } else {
+      alert("Erro ao enviar dados.");
+    }
+  } catch (error) {
+    console.error("Erro ao enviar dados:", error);
+  }
 }
 
 listarRepositorios();
