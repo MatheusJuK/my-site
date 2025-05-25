@@ -194,10 +194,8 @@ section.tecnologias {
   min-height: 50rem;
 }
 section.tecnologias > h1 {
-  color: var(--primary-color);
   font-size: 1.5em;
   text-decoration: underline;
-  text-decoration-color: var(--primary-color);
   text-align: center;
   margin-top: 40px;
 }
@@ -221,20 +219,33 @@ section.tecnologias > h1 {
 
 /* ESTILO PROJETOS */
 section.projetos {
-  padding: 80px 4%;
-  overflow: hidden;
-}
-section.projetos .interface > h1 {
-  color: var(--primary-color);
-  font-size: 1.5em;
-  text-align: center;
-  text-decoration-color: var(--primary-color);
-}
-section.projetos .flex {
-  justify-content: space-around;
+  padding: 40px 4%;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  gap: 80px;
+}
+#container-projetos {
+  display: grid;
+  max-width: 60%;
+  padding: 50px;
+  border-radius: 8px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: 2;
+  background-color: #272525;
+}
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: #011414;
 }
 
 /* Estilo habilidades */
@@ -254,7 +265,6 @@ section.habilidades .flex {
   margin-bottom: 60px;
 }
 section.habilidades > h1 {
-  color: var(--primary-color);
   font-size: 1em;
   text-align: center;
   font-size: 1.5em;
@@ -311,10 +321,8 @@ form {
   gap: 10px;
 }
 section.contato .interface > h1 {
-  color: var(--primary-color);
   font-size: 1.5em;
   text-align: center;
-  text-decoration-color: var(--primary-color);
   margin-bottom: 100px;
 }
 form input,
@@ -472,6 +480,15 @@ footer .copyright {
   section.projetos .flex {
     margin-top: 100px;
     gap: 0px;
+  }
+  section.projetos .interface {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .prev,
+  .next {
+    display: none;
   }
   /* footer */
   footer .flex {

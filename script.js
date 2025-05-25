@@ -40,7 +40,6 @@ async function enviarDadosParaDiscord(nome, email, celular, mensagem) {
   }
 }
 
-listarRepositorios();
 async function listarRepositorios() {
   const response = await fetch(
     `https://api.github.com/users/${userName}/repos`
@@ -49,12 +48,14 @@ async function listarRepositorios() {
 
   for (const repo of repos) {
     const card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("projeto-card");
     card.innerHTML = `
       <h3>${repo.name}</h3>
       <p>${repo.description || "Sem descrição"}</p>
-      <a href="${repo.html_url}" target="_blank">Ver no Github</a>
+      <a href="${repo.html_url}" target="_blank">Ver no GitHub</a>
     `;
     container.appendChild(card);
   }
 }
+
+listarRepositorios();
