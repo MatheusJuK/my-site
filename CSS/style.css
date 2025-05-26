@@ -120,9 +120,6 @@ section.topo-site .flex {
 .topo-site h1 span {
   color: var(--primary-color);
 }
-.topo-site .txt-topo-site p span {
-  color: var(--primary-color);
-}
 .topo-site .txt-topo-site p {
   width: 500px;
   margin: 20px 0;
