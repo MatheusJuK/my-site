@@ -474,21 +474,10 @@ footer .copyright {
   }
 
   /* projetos */
-  section.projetos {
-    padding: 20px 10%;
-  }
-  section.projetos .flex {
-    margin-top: 100px;
-    gap: 0px;
-  }
-  section.projetos .interface {
-    width: 200px;
-    padding: 15px;
-  }
-
-  .prev,
-  .next {
-    display: none;
+  #container-projetos {
+    flex-direction: column;
+    padding: 20px;
+    max-width: 90%;
   }
   /* footer */
   footer .flex {
