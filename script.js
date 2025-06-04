@@ -15,7 +15,7 @@ formulario.addEventListener("submit", (event) => {
 
 async function enviarDadosParaDiscord(nome, email, celular, mensagem) {
   const webhookURL =
-    "https://discord.com/api/webhooks/1364744699092406392/klQuENRgGkiKpMpRYDvAatomcDS1oq14gn6X-M4PWzO6DRDj3uVatpC4n2YwRB4E60Ws";
+    "https://discord.com/api/webhooks/1379840221151100959/JKpkzBWOU0mWjG5TQK6fjxmiBRY-ECaifAORyfJ1Lg61AeZ3H7wlngihXogmoMcfA0Km";
 
   const dados = {
     content: `Nome: ${nome}\nEmail: ${email}\nTelefone: ${celular}\nMensagem: ${mensagem}`,
